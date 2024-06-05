@@ -5,9 +5,10 @@ open DSharpPlus.EventArgs
 
 module Omnissiah =
     let CreateClient () =
+
         let config =
             DiscordConfiguration(
-                Token = Config.DISCORD_TOKEN,
+                Token = Config.DISCORD_TOKEN, //Config.DISCORD_TOKEN,
                 TokenType = TokenType.Bot,
                 Intents = (DiscordIntents.AllUnprivileged ||| DiscordIntents.MessageContents)
             )
